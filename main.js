@@ -23,7 +23,7 @@ const loop = setInterval(()=>{
         green.style.animation = 'none'
         green.style.bottom = `${greenPosition}px`
 
-        green.src = './morte.png';
+        green.src = 'morte.png';
         green.style.width = '88px'
 
 
