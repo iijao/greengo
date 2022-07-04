@@ -41,19 +41,24 @@
   width: 700px;
   animation: clouds-animation 10s linear infinite;
 }
-.died{
-
+.tex{
   text-transform: uppercase;
   position: absolute;
-  top: -10%;
   color: wheat;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 10px;
+  
 }
-.died span{
+.tex2 span{
   color: rgb(223, 79, 79);
 }
+.tex2{
+  text-transform: uppercase;
+  position: absolute;
+  color: wheat;
+  left: 10px;
+  top: 30px
 
+}
 @keyframes obstaculo-animation{
   from {
     right: -50px;
