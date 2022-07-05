@@ -4,6 +4,9 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
+body{
+  background-color: #160f1f;
+}
 .game-board{
   background-image: url(./background.png);
   width: 100%;
@@ -42,6 +45,7 @@
   animation: clouds-animation 10s linear infinite;
 }
 .tex{
+  margin-top: 30px;
   text-transform: uppercase;
   position: absolute;
   color: wheat;
@@ -52,6 +56,7 @@
   color: rgb(223, 79, 79);
 }
 .tex2{
+  margin-top: 40px;
   text-transform: uppercase;
   position: absolute;
   color: wheat;
