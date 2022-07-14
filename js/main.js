@@ -33,7 +33,7 @@ const loop = setInterval(()=>{
         green.style.bottom = `${greenPosition}px`;
 
         //mudar imagem personagem pra morto
-        green.src = '/game/images/lhama-morta.png';
+        green.src = './images/lhama-morta.png';
         green.style.width = '100px';
 
         //adicionar texto HTML
