@@ -4,13 +4,14 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
-body{
-  background-color: #160f1f;
-}
 .game-board{
-  background-image: url(./background.png);
-  width: 100%;
-  height: 743px;
+  animation: background-animation 20s linear infinite;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-image: url(/game/images/backgroundspace.png);
+  width: 100vw;
+  height: 90vh;
   position: relative;
   margin: 0 auto;
   overflow: hidden;
@@ -20,7 +21,7 @@ body{
   position: absolute;
   bottom: 0;
   width: 50px;
-  animation: obstaculo-animation 1.5s infinite linear;
+  animation: obstaculo-animation 2.6s infinite linear;
 }
 .green{
   position: absolute;
@@ -31,18 +32,29 @@ body{
   animation: jump 500ms ease-out;
 }
 .ground{
+  width: 100%;
+  height: 10vh;
+  overflow: hidden;
+  box-sizing: border-box;
   position: relative;
 }
 .chao{
+  animation: ground-animation 2.5s linear infinite;
   position: absolute;
   bottom: -8;
+  width: 200%;
+}
+.planet{
+  top: 100px;
+  position: absolute;
   width: 100%;
 }
-.clouds{
+.ship{
+  z-index: 10;
   position: absolute;
   top:  200px;
-  width: 700px;
-  animation: clouds-animation 10s linear infinite;
+  width: 120px;
+  animation: ship-animation 5s linear infinite;
 }
 .tex{
   margin-top: 30px;
@@ -60,10 +72,25 @@ body{
   text-transform: uppercase;
   position: absolute;
   color: wheat;
-  left: 10px;
-  top: 30px
-
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
 }
+body{
+  background-color: #160f1f;
+}
+#score{
+  padding: 7px 20px;
+  background-color: wheat;
+  display: block;
+  position: absolute;
+  right: 50px;
+  top: 20px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+
 @keyframes obstaculo-animation{
   from {
     right: -50px;
@@ -71,6 +98,23 @@ body{
 
   to{
     right: 100%;
+  }
+}
+@keyframes ground-animation{
+  from {
+    left: 0;
+  }
+
+  to{
+    left: -100%;
+  }
+}
+@keyframes background-animation{
+  from { background-position: 0px;
+  }
+
+  to{
+    background-position: 100%;
   }
 }
 @keyframes jump{
@@ -90,10 +134,9 @@ body{
     bottom: 0px;
   }
 }
-
-@keyframes clouds-animation {
+@keyframes ship-animation {
   from{
-    right: -700px;
+    right: -800px;
   }
   to{
     right: 100%;
