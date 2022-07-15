@@ -9,7 +9,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
-  background-image: url(/game/images/backgroundspace.png);
+  background-image: url(./game/images/backgroundspace.png);
   width: 100vw;
   height: 90vh;
   position: relative;
